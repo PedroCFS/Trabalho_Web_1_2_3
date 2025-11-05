@@ -1,0 +1,226 @@
+:root {
+    --primary-color: #7b75b1;
+    --second-color: #ffffff;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    height: 100dvh;
+    width: 100dvw;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 70px;
+    width: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+
+    .logo {
+        font-size: 30px;
+        color: white;
+        font-weight: 800;
+        cursor: pointer;
+    }
+
+    .hd-button {
+        height: 40px;
+        width: 120px;
+        border-radius: 8px;
+        font-size: 18px;
+        background-color: var(--second-color);
+        border: none;
+        color: var(--primary-color);
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+.container {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.btn-box {
+    display: flex;
+    margin: auto;
+    gap: 14px;
+    box-sizing: border-box;
+}
+
+.title {
+    width: 100%;
+    background-color: var(--second-color);
+    color: var(--primary-color);
+    font-size: 50px;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.104);
+    text-align: center;
+}
+
+.photos {
+    flex: 1;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.104);
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-content: start;
+}
+
+.photo {
+    height: 250px;
+    width: calc(33% - 4px);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.104);
+}
+
+.menu-item {
+    height: auto;
+    min-height: 120px;
+    width: calc(33% - 8px);
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.104);
+    background-color: rgb(255, 255, 255);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.item-image {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-content h3 {
+    margin: 0 0 8px 0;
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.item-description {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.item-type, .item-style {
+    margin: 0 0 5px 0;
+    font-size: 12px;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.item-players {
+    margin: 0 0 8px 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.item-ingredients {
+    margin: 0 0 8px 0;
+}
+
+.item-ingredients strong {
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.item-ingredients ul {
+    margin: 5px 0 0 0;
+    padding-left: 15px;
+    font-size: 11px;
+    color: #666;
+}
+
+.item-price {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2e7d32;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.photo {
+    height: 250px;
+    width: calc(33% - 4px);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.104);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.photo p {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+
+.ct-2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: start;
+}

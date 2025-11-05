@@ -1,0 +1,15 @@
+# Dependências Python para o projeto GamePub
+# Execute: pip install -r requirements.txt
+
+# Biblioteca para monitoramento de arquivos em tempo real
+watchdog>=2.1.0
+
+# Nota: Os seguintes módulos são nativos do Python e não precisam ser instalados:
+# - json
+# - os
+# - time
+# - http.server
+# - threading
+# - webbrowser
+# - subprocess
+# - sys

@@ -1,0 +1,59 @@
+[   
+    
+    {
+        "estilo": "Sorte",
+        "nome": "Ludo",
+        "descricao": "Jogo de tabuleiro para 2-4 jogadores.",
+        "jogadores": "2-4",
+        "imagem": "back/assets/ludo.jpg"
+    },
+    {
+        "estilo": "Estrategia",
+        "nome": "Detetive",
+        "descricao": "Jogo de tabuleiro para 3-6 jogadores.",
+        "jogadores": "3-6",
+        "imagem": "back/assets/detetive.jpg"
+    },
+    {
+        "estilo": "Sorte",
+        "nome": "Jogo da Vida",
+        "descricao": "Jogo de tabuleiro para 3-6 jogadores.",
+        "jogadores": "3-6",
+        "imagem": "back/assets/jogodavida.jpg"
+    },
+    {
+        "estilo": "Estrategia",
+        "nome": "War",
+        "descricao": "Jogo de tabuleiro para 3-6 jogadores.",
+        "jogadores": "3-6",
+        "imagem": "back/assets/war.jpg"
+    },
+    {
+        "estilo": "Estrategia",
+        "nome": "Batalha Naval",
+        "descricao": "Jogo de tabuleiro para 2 jogadores.",
+        "jogadores": "2",
+        "imagem": "back/assets/batalha_naval.jpg"
+    },
+    {
+        "estilo": "Cartas",
+        "nome": "Uno",
+        "descricao": "Jogo de cartas para 3-7 jogadores.",
+        "jogadores": "3-7",
+        "imagem": "back/assets/uno.jpg"
+    },
+    {
+        "estilo": "Cartas",
+        "nome": "Poker",
+        "descricao": "Jogo de cartas para 2-8 jogadores.",
+        "jogadores": "2-8",
+        "imagem": "back/assets/poker.jpg"
+    },
+    {
+        "estilo": "Estrategia",
+        "nome": "Monopoly",
+        "descricao": "Jogo de tabuleiro clássico.",
+        "jogadores": "2-8",
+        "imagem": "back/assets/monopoly.jpg"
+    }
+]

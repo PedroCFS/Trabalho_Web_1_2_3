@@ -1,0 +1,22 @@
+[
+    {
+        "area": "mesas",
+        "descricao": "Área para refeições.",
+        "imagem": "back/assets/mesas.jpeg"
+    },
+    {
+        "area": "bar",
+        "descricao": "Área do bar para bebidas e petiscos.",
+        "imagem": "back/assets/bar.jpg"
+    },
+    {
+        "area": "brinquedoteca",
+        "descricao": "Área para as crianças.",
+        "imagem": "back/assets/brinquedoteca.jpg"
+    },
+    {
+        "area": "jogos",
+        "descricao": "Área dedicada aos jogos.",
+        "imagem": "back/assets/jogos.jpg"
+    }
+]

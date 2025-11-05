@@ -1,0 +1,91 @@
+[
+    {
+        "tipo": "bebida",
+        "nome": "Cerveja",
+        "descricao": "Cerveja clássica.",
+        "ingredientes": [
+            "--"
+        ],
+        "preco": 18.70,
+        "imagem": "back/assets/cerveja.jpg"
+    },
+    {
+        "tipo": "bebida",
+        "nome": "Refrigerante Coca-Cola",
+        "descricao": "Coca-Cola 600ml.",
+        "ingredientes": [
+            "--"
+        ],
+        "preco": 8.5,
+        "imagem": "back/assets/coca.jpg"
+    },
+    {
+        "tipo": "comida",
+        "nome": "X-Burger",
+        "descricao": "Hambúrguer, queijo mussarela, cebola, alface, tomate e molho da casa.",
+        "ingredientes": [
+            "pão",
+            "carne",
+            "queijo",
+            "molho"
+        ],
+        "preco": 28.0,
+        "imagem": "back/assets/xburger.jpg"
+    },
+    {
+        "tipo": "comida",
+        "nome": "X-bacon",
+        "descricao": "Hambúrguer, queijo mussarela, bacon, cebola, alface, tomate e molho da casa.",
+        "ingredientes": [
+            "pão",
+            "carne",
+            "queijo",
+            "molho"
+        ],
+        "preco": 30.0,
+        "imagem": "back/assets/xbacon.jpg"
+    },
+    {
+        "tipo": "comida",
+        "nome": "Pizza 5 Queijos",
+        "descricao": "Mussarela, parmessão, gorgonzola, provolone, catupiry e orégano",
+        "ingredientes": [
+            "massa", 
+            "queijo de mussarela", 
+            "queijo de parmessão",
+             "queijo de gorgonzola",
+             "queijo de provolone", 
+             "queijo de catupiry", 
+             "orégano","molho de tomate"
+        ],
+        "preco": 45.0,
+        "imagem": "back/assets/pizza5queijos.jpg"
+    },
+    {
+        "tipo": "acompanhamento",
+        "nome": "Batata Frita",
+        "descricao": "Porção de batatas fritas 300g.",
+        "ingredientes": [
+            "batata",
+            "sal",
+            "oregano",
+            "paprica"
+        ],
+        "preco": 15.0,
+        "imagem": "back/assets/batata.jpg"
+    },
+    
+    {
+        "tipo": "acompanhamento",
+        "nome": "Bolinho de frango",
+        "descricao": "Porção de bolinho de frango 300g.",
+        "ingredientes": [
+            "frango",
+            "sal",
+            "oregano",
+            "paprica"
+        ],
+        "preco": 15.0,
+        "imagem": "back/assets/frango.jpg"
+    }
+]

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}GamePub - Cardápio{% endblock %}
+
+{% block content %}
+    <div class="title">Cardápio</div>
+    <div class="container ct-2">
+        {% for item in cardapio %}
+        <div class="menu-item">
+            <div class="item-image">
+                {% if item.imagem %}
+                    <img src="{{ item.imagem.url }}" alt="{{ item.nome }}">
+                {% else %}
+                    <img src="{% static 'images/default.jpg' %}" alt="{{ item.nome }}">
+                {% endif %}
+            </div>
+            <div class="item-content">
+                <h3>{{ item.nome }}</h3>
+                <p class="item-description">{{ item.descricao }}</p>
+                {% if item.tipo %}
+                    <p class="item-style">Tipo: {{ item.tipo.nome }}</p>
+                {% endif %}
+                <p class="item-price">Preço: R$ {{ item.preco|floatformat:2 }}</p>
+                {% if item.ingredientes_items.all %}
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #7f8c8d;">
+                        Ingredientes: 
+                        {% for item_ingrediente in item.ingredientes_items.all %}
+                            {{ item_ingrediente.ingrediente.nome }}{% if not forloop.last %}, {% endif %}
+                        {% endfor %}
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+        {% empty %}
+        <p>Nenhum item no cardápio.</p>
+        {% endfor %}
+    </div>
+{% endblock %}
+
