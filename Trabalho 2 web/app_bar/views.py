@@ -13,7 +13,7 @@ def index(request):
         'jogos': jogos_destaque,
         'cardapio': cardapio_destaque,
     }
-    return render(request, 'app_bar/index.html', context)
+    return render(request, 'app_bar/home.html', context)
 
 
 def jogos(request):

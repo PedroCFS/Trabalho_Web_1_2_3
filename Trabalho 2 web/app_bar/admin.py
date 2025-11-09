@@ -20,7 +20,6 @@ class AreaAdmin(admin.ModelAdmin):
     list_display = ['nome', 'descricao_curta', 'quantidade_jogos']
     list_filter = ['nome']
     search_fields = ['nome', 'descricao']
-    inlines = [JogoInline]
     fields = ['nome', 'descricao', 'imagem']
     
     def descricao_curta(self, obj):
@@ -68,7 +67,6 @@ class CategoriaItemAdmin(admin.ModelAdmin):
     list_editable = ['ordem']
     list_filter = ['ordem']
     search_fields = ['nome']
-    inlines = [ItemCardapioInline]
     ordering = ['ordem', 'nome']
     
     def quantidade_itens(self, obj):
@@ -79,7 +77,7 @@ class CategoriaItemAdmin(admin.ModelAdmin):
 @admin.register(ItemCardapio)
 class ItemCardapioAdmin(admin.ModelAdmin):
     """Admin customizado para Itens do Cardápio"""
-    list_display = ['nome', 'categoria', 'preco_formatado', 'disponivel']
+    list_display = ['nome', 'preco', 'categoria', 'preco_formatado', 'disponivel']
     list_filter = ['categoria', 'disponivel']
     search_fields = ['nome', 'descricao']
     list_editable = ['preco', 'disponivel']

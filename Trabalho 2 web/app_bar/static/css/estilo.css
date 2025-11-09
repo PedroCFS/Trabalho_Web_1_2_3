@@ -1,6 +1,9 @@
 :root {
     --primary-color: #7b75b1;
     --second-color: #ffffff;
+    --terciary-color: #d7cde1;
+
+    --dft-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.043);
 }
 
 body {
@@ -14,33 +17,43 @@ body {
 }
 
 .header {
-    height: 70px;
+    height: 60px;
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: white;
     display: flex;
     align-items: center;
     padding: 0px 20px 0px 20px;
     box-sizing: border-box;
     flex-shrink: 0;
+    box-shadow: var(--dft-box-shadow)
 }
 
 .logo {
     font-size: 30px;
-    color: white;
-    font-weight: 800;
+    color: var(--primary-color);
+    font-weight: 900;
     cursor: pointer;
+    font-style: italic;
 }
 
 .hd-button {
-    height: 40px;
-    width: 120px;
+    height: 30px;
+    width: 100px;
     border-radius: 8px;
     font-size: 18px;
-    background-color: var(--second-color);
+    color: white;
     border: none;
-    color: var(--primary-color);
+    background-color: var(--terciary-color);
     font-weight: 700;
     cursor: pointer;
+    font-size: 12px;
+    box-shadow: var(--dft-box-shadow);
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        transform: translateY(-2px);
+        background-color: var(--primary-color);
+    }
 }
 
 .container {
@@ -99,11 +112,11 @@ body {
 }
 
 .menu-item {
-    height: auto;
+    height: 60px;
     min-height: 120px;
     width: calc(33% - 8px);
     border-radius: 8px;
-    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.104);
+    box-shadow: var(--dft-box-shadow);
     background-color: rgb(255, 255, 255);
     flex-shrink: 0;
     display: flex;
@@ -195,6 +208,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: start;
+    min-height: fit-content;
 }
 
 .disponibilidade {

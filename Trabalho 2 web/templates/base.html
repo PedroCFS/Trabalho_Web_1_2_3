@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="header">
-        <span class="logo">GamePub</span>
+        <span class="logo">Game Pub 🕹️</span>
         <div class="btn-box">
             <button class="hd-button" id="home-btn">Home</button>
             <button class="hd-button" id="menu-btn">Cardapio</button>
@@ -17,9 +17,13 @@
         </div>
     </div>
     <div class="container">
-        {% block content %}{% endblock %}
+        {% block content %}
+        {% endblock %}
     </div>
     <script src="{% static 'js/script.js' %}"></script>
+    {% if debug %}
+        <script src="http://127.0.0.1:35729/livereload.js"></script>
+    {% endif %}
 </body>
 </html>
 
