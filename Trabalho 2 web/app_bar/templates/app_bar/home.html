@@ -4,7 +4,7 @@
 {% block title %}GamePub - Home{% endblock %}
 
 {% block content %}
-    <div class="title">Aqui sua diversão é nossa prioridade!</div>
+    <div class="title">Áreas</div>
     
     <div class="container ct-2">
         {% for area in areas %}
@@ -18,7 +18,7 @@
             </div>
         </div>
         {% empty %}
-        <p>Nenhuma área cadastrada.</p>
+        <p class="not">Nenhuma área cadastrada!</p>
         {% endfor %}
     </div>
     
@@ -36,7 +36,7 @@
             </div>
         </div>
         {% empty %}
-        <p>Nenhum item no cardápio.</p>
+        <p class="not">Nenhum item no cardápio!</p>
         {% endfor %}
     </div>
     
@@ -55,7 +55,7 @@
             </div>
         </div>
         {% empty %}
-        <p>Nenhum jogo cadastrado.</p>
+        <p class="not">Nenhum jogo cadastrado!</p>
         {% endfor %}
     </div>
 {% endblock %}

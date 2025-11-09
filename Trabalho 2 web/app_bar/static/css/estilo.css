@@ -76,15 +76,12 @@ body {
 
 .title {
     width: 100%;
-    background-color: var(--second-color);
     color: var(--primary-color);
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 600;
-    background-color: rgb(255, 255, 255);
     padding: 10px;
     box-sizing: border-box;
     border-radius: 8px;
-    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.104);
     text-align: center;
 }
 
@@ -113,27 +110,27 @@ body {
 
 .menu-item {
     height: 60px;
-    min-height: 120px;
-    width: calc(33% - 8px);
-    border-radius: 8px;
+    min-height: 130px;
+    width: calc(25% - 8px);
+    border-radius: 4px;
     box-shadow: var(--dft-box-shadow);
     background-color: rgb(255, 255, 255);
     flex-shrink: 0;
     display: flex;
     flex-direction: row;
-    padding: 15px;
+    padding: 8px;
     box-sizing: border-box;
     margin-bottom: 15px;
     position: relative;
 }
 
 .item-image {
-    width: 100px;
-    height: 100px;
+    height: 70%;
     overflow: hidden;
     border-radius: 8px;
     margin-right: 15px;
     flex-shrink: 0;
+    aspect-ratio: 1/1;
 }
 
 .item-image img {
@@ -147,35 +144,41 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 2px;
 }
 
-.item-content h3 {
-    margin: 0 0 8px 0;
+/*Título cartão*/
+.item-content h3 { 
     color: var(--primary-color);
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+    margin: 0;
 }
 
 .item-description {
-    margin: 0 0 8px 0;
-    font-size: 14px;
-    color: #666;
-    line-height: 1.4;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 4px;
+    font-size: 13px;
+    background-color: #f7f3ff;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .item-type, .item-style {
-    margin: 0 0 5px 0;
+    margin: 0;
     font-size: 12px;
-    color: var(--primary-color);
     font-weight: 600;
-    text-transform: uppercase;
+    color: var(--primary-color);
 }
 
 .item-players {
-    margin: 0 0 8px 0;
+    margin: 0;
     font-size: 12px;
-    color: #666;
+    font-weight: 600;
+    color: var(--primary-color);
 }
 
 .item-ingredients {
@@ -196,12 +199,12 @@ body {
 
 .item-price {
     margin: 0;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     color: #2e7d32;
-    position: absolute;
     bottom: 15px;
     right: 15px;
+    text-align: center;
 }
 
 .ct-2 {
@@ -212,22 +215,18 @@ body {
 }
 
 .disponibilidade {
-    margin: 5px 0 0 0;
     font-size: 12px;
     font-weight: 600;
-    padding: 4px 8px;
     border-radius: 4px;
     display: inline-block;
 }
 
 .disponibilidade.disponivel {
     color: #2e7d32;
-    background-color: #c8e6c9;
 }
 
 .disponibilidade.indisponivel {
     color: #c62828;
-    background-color: #ffcdd2;
 }
 
 @media (max-width: 768px) {
@@ -260,3 +259,12 @@ body {
     }
 }
 
+.not {
+    background-color: var(--terciary-color);
+    color: var(--primary-color);
+    padding: 4px 4px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    font-size: 14px;
+}
