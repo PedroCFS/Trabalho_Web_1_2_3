@@ -10,14 +10,10 @@
         {% for area in areas %}
         <div class="menu-item">
             <div class="item-image">
-                {% if area.imagem %}
-                    <img src="{{ area.imagem.url }}" alt="{{ area.nome }}">
-                {% else %}
-                    <img src="{% static 'images/default.jpg' %}" alt="{{ area.nome }}">
-                {% endif %}
+                <img src="{% static area.imagem %}" alt="{{ area.nome }}">
             </div>
             <div class="item-content">
-                <h3>{{ area.nome|title }}</h3>
+                <h3>{{ area.nome }}</h3>
                 <p class="item-description">{{ area.descricao }}</p>
             </div>
         </div>
@@ -31,11 +27,7 @@
         {% for item in cardapio %}
         <div class="menu-item">
             <div class="item-image">
-                {% if item.imagem %}
-                    <img src="{{ item.imagem.url }}" alt="{{ item.nome }}">
-                {% else %}
-                    <img src="{% static 'images/default.jpg' %}" alt="{{ item.nome }}">
-                {% endif %}
+                <img src="{% static item.imagem %}" alt="{{ item.nome }}">
             </div>
             <div class="item-content">
                 <h3>{{ item.nome }}</h3>
@@ -53,22 +45,13 @@
         {% for jogo in jogos %}
         <div class="menu-item">
             <div class="item-image">
-                {% if jogo.imagem %}
-                    <img src="{{ jogo.imagem.url }}" alt="{{ jogo.nome }}">
-                {% else %}
-                    <img src="{% static 'images/default.jpg' %}" alt="{{ jogo.nome }}">
-                {% endif %}
+                <img src="{% static jogo.imagem %}" alt="{{ jogo.nome }}">
             </div>
             <div class="item-content">
                 <h3>{{ jogo.nome }}</h3>
                 <p class="item-description">{{ jogo.descricao }}</p>
-                {% if jogo.categoria %}
-                    <p class="item-style">Estilo: {{ jogo.categoria.nome }}</p>
-                {% endif %}
-                <p class="item-players">Jogadores: {{ jogo.get_jogadores_str }}</p>
-                <div class="disponibilidade {% if jogo.quantidade_disponivel > 0 %}disponivel{% else %}indisponivel{% endif %}">
-                    Disponível: {{ jogo.quantidade_disponivel }}/{{ jogo.quantidade_total }}
-                </div>
+                <p class="item-style">Estilo: {{ jogo.estilo }}</p>
+                <p class="item-players">Jogadores: {{ jogo.get_jogadores_display }}</p>
             </div>
         </div>
         {% empty %}
@@ -76,4 +59,3 @@
         {% endfor %}
     </div>
 {% endblock %}
-

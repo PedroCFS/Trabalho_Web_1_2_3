@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <title>{% block title %}GamePub{% endblock %}</title>
+</head>
+<body>
+    <div class="header">
+        <span class="logo">GamePub</span>
+        <div class="btn-box">
+            <button class="hd-button" id="home-btn">Home</button>
+            <button class="hd-button" id="menu-btn">Cardapio</button>
+            <button class="hd-button" id="games-btn">Jogos</button>
+        </div>
+    </div>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+

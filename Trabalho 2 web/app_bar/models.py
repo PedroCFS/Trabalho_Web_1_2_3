@@ -9,26 +9,36 @@ class Area(models.Model):
         return self.nome
 
 class Jogo(models.Model):
-    DISPONIVEL = 'D'
-    EM_USO = 'U'
-    MANUTENCAO = 'M'
-    
-    STATUS_CHOICES = [
-        (DISPONIVEL, 'Disponível'),
-        (EM_USO, 'Em uso'),
-        (MANUTENCAO, 'Em manutenção'),
+    ESTILO_CHOICES = [
+        ('Sorte', 'Sorte'),
+        ('Estrategia', 'Estrategia'),
+        ('Cartas', 'Cartas'),
+        ('Tabuleiro', 'Tabuleiro'),
     ]
     
     nome = models.CharField(max_length=100)
     descricao = models.TextField()
     imagem = models.CharField(max_length=200, default='images/jogos/default.jpg')
+    estilo = models.CharField(max_length=20, choices=ESTILO_CHOICES, default='Tabuleiro')
+    jogadores_min = models.IntegerField(default=2)
+    jogadores_max = models.IntegerField(default=4)
     copias_totais = models.IntegerField(default=1)
     copias_disponiveis = models.IntegerField(default=1)
-    status = models.CharField(max_length=1, choices=STATUS_CHOICES, default=DISPONIVEL)
-    area = models.ForeignKey(Area, on_delete=models.CASCADE)
+    area = models.ForeignKey(Area, on_delete=models.CASCADE, related_name='jogos')
+    
+    class Meta:
+        ordering = ['nome']
+        verbose_name = 'Jogo'
+        verbose_name_plural = 'Jogos'
     
     def __str__(self):
         return f"{self.nome} ({self.copias_disponiveis}/{self.copias_totais} disponíveis)"
+    
+    def get_jogadores_display(self):
+        """Retorna string formatada com número de jogadores"""
+        if self.jogadores_min == self.jogadores_max:
+            return str(self.jogadores_min)
+        return f"{self.jogadores_min}-{self.jogadores_max}"
 
 class CategoriaItem(models.Model):
     nome = models.CharField(max_length=100)

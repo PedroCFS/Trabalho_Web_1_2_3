@@ -4,31 +4,26 @@
 {% block title %}GamePub - Jogos{% endblock %}
 
 {% block content %}
-    <div class="title">Jogos Disponíveis</div>
+    <div class="title">Jogos</div>
     <div class="container ct-2">
         {% for jogo in jogos %}
         <div class="menu-item">
             <div class="item-image">
-                {% if jogo.imagem %}
-                    <img src="{{ jogo.imagem.url }}" alt="{{ jogo.nome }}">
-                {% else %}
-                    <img src="{% static 'images/default.jpg' %}" alt="{{ jogo.nome }}">
-                {% endif %}
+                <img src="{% static jogo.imagem %}" alt="{{ jogo.nome }}">
             </div>
             <div class="item-content">
                 <h3>{{ jogo.nome }}</h3>
                 <p class="item-description">{{ jogo.descricao }}</p>
-                {% if jogo.categoria %}
-                    <p class="item-style">Estilo: {{ jogo.categoria.nome }}</p>
-                {% endif %}
-                <p class="item-players">Jogadores: {{ jogo.get_jogadores_str }}</p>
-                <div class="disponibilidade {% if jogo.quantidade_disponivel > 0 %}disponivel{% else %}indisponivel{% endif %}">
-                    Disponível: {{ jogo.quantidade_disponivel }}/{{ jogo.quantidade_total }}
-                </div>
-                {% if jogo.quantidade_em_uso > 0 %}
-                    <p class="em-uso" style="margin-top: 0.5rem; padding: 0.25rem;">
-                        Em uso: {{ jogo.quantidade_em_uso }}
-                    </p>
+                <p class="item-style">Estilo: {{ jogo.estilo }}</p>
+                <p class="item-players">Jogadores: {{ jogo.get_jogadores_display }}</p>
+                {% if jogo.copias_disponiveis > 0 %}
+                    <div class="disponibilidade disponivel">
+                        Disponível: {{ jogo.copias_disponiveis }}/{{ jogo.copias_totais }}
+                    </div>
+                {% else %}
+                    <div class="disponibilidade indisponivel">
+                        Indisponível: {{ jogo.copias_disponiveis }}/{{ jogo.copias_totais }}
+                    </div>
                 {% endif %}
             </div>
         </div>
@@ -37,4 +32,3 @@
         {% endfor %}
     </div>
 {% endblock %}
-
