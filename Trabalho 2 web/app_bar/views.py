@@ -1,37 +1,27 @@
 from django.shortcuts import render
-from .models import Area, Jogo, ItemCardapio
-
+from .models import Area, Jogo, CategoriaItem, ItemCardapio
 
 def index(request):
-    """View para a página inicial"""
     areas = Area.objects.all()
-    jogos_destaque = Jogo.objects.all()[:4]  # Primeiros 4 jogos
-    cardapio_destaque = ItemCardapio.objects.all()[:4]  # Primeiros 4 itens
-    
     context = {
-        'areas': areas,
-        'jogos': jogos_destaque,
-        'cardapio': cardapio_destaque,
+        'areas': areas
     }
     return render(request, 'app_bar/index.html', context)
 
-
 def jogos(request):
-    """View para a página de jogos com disponibilidade"""
-    jogos = Jogo.objects.all().prefetch_related('disponibilidades')
+    jogos = Jogo.objects.select_related('area').all()
+    areas = Area.objects.all()
     
     context = {
         'jogos': jogos,
+        'areas': areas
     }
     return render(request, 'app_bar/jogos.html', context)
 
-
 def cardapio(request):
-    """View para a página do cardápio"""
-    cardapio = ItemCardapio.objects.select_related('tipo').prefetch_related('ingredientes_items__ingrediente')
+    categorias = CategoriaItem.objects.prefetch_related('itemcardapio_set').all()
     
     context = {
-        'cardapio': cardapio,
+        'categorias': categorias
     }
     return render(request, 'app_bar/cardapio.html', context)
-

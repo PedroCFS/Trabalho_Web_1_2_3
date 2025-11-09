@@ -8,4 +8,3 @@ urlpatterns = [
     path('jogos/', views.jogos, name='jogos'),
     path('cardapio/', views.cardapio, name='cardapio'),
 ]
-
